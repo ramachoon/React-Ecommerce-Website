@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
       </div>
       <p className='text-center'>&copy; 2023 </p>
-      <p className='text-center'>E-Shopify 🛒 - made by Shubham Hemant Joshi❤️. </p>
+      <p className='text-center'>E-Shopify 🛒 - made by Shubham Hemant Joshi❤️ </p>
       <p className='text-center'>All rights reserved.</p>
     </footer>
   );
