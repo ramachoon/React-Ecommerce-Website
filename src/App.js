@@ -10,6 +10,7 @@ import CartComponent from "./components/CartComponent";
 import WishlistComponent from "./components/WishlistComponent";
 import { useState } from "react";
 import { Toaster } from "react-hot-toast";
+import Footer from "./components/Footer";
 
 function App() {
   const [openCart, setOpenCart] = useState(false);
@@ -33,6 +34,7 @@ function App() {
           <Route path="wishlist" element={<WishlistPage />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }
