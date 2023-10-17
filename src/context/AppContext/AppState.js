@@ -25,13 +25,16 @@ export default function AppState({ children }) {
   };
 
   let handleQuantityChange = (productId,newQuantity)=>{
-    const updatedCart = cartItems.map(product=>
-    product.id === productId? {...product,quantity:newQuantity}:product
-        )
-    setCartItems(updatedCart)
-    toast.success("Cart Product Quantity Changed")
-    
+    if (newQuantity >= 1 && newQuantity <= 10) {
+    const updatedCart = cartItems.map((product) =>
+      product.id === productId ? { ...product, quantity: newQuantity } : product
+    );
+    setCartItems(updatedCart);
+    toast.success("Cart Product Quantity Changed");
+  } else {
+    toast.error("Quantity must be between 1 and 10");
   }
+};
   //total price
   const calculateTotalCartPrice = () => {
     return cartItems.reduce((total, product) => {
